@@ -1,3 +1,5 @@
+import { PATH } from "@/config/path";
+import Detail from "@/pages/[slug]";
 import { lazy } from "react";
 
 const Home = lazy(() => import("@/pages"))
@@ -9,10 +11,13 @@ export const routers = [
         element: <MainLayout />,
         children: [
             {
-                path: '/',
+                path: PATH.Home,
                 element: <Home />
             },
-
+            {
+                path:PATH.Detail,
+                element:<Detail />
+            },
             {
                 path: '*',
                 element: <Page404 />

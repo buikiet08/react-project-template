@@ -1,9 +1,9 @@
 import { ENV } from '@/config'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import { authReducer } from './authReducer'
+import { musicReducer } from './musicReducer'
 
 const reducers = combineReducers({
-    auth: authReducer
+    music: musicReducer
 })
 
 export const store = configureStore({

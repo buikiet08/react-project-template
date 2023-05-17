@@ -11,7 +11,7 @@ export const useAsync = (promise) => {
             setLoading(true)
             setStatus('pending')
             const res = await promise(...data)
-            setData(res)
+            setData(res.data)
             setStatus('success')
             return res
         } catch (err) {

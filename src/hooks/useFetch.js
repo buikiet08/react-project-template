@@ -12,11 +12,11 @@ export const useFetch = (promise, dependencyList = []) => {
     }, dependencyList)
 
 
-    const fetchData = async () => {
+    const fetchData = async (...data) => {
         try {
             setLoading(true)
             setStatus('pending')
-            const res = await promise()
+            const res = await promise(...data)
             setData(res.data)
             setStatus('success')
         } catch (err) { 
